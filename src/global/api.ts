@@ -13,5 +13,6 @@ const Axios = axios.create(config);
 
 export const getWeather = async (): Promise<WeatherResponse> => {
   const response = await Axios.get<WeatherResponse>(`${API}`);
+  console.log(`response.data: ${JSON.stringify(response.data)}`);
   return response.data;
 };
