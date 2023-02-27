@@ -13,6 +13,8 @@ RUN yarn build
 
 FROM nginx:latest
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 WORKDIR /usr/share/nginx/html
 
 RUN rm -rf ./*
