@@ -1,0 +1,12 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: faro-demo-react
+deploy:
+  helm:
+    releases:
+    - name: faro-demo-react
+      chartPath: k8s/helm
+      valuesFiles:
+      - k8s/helm/values.yaml
+      version: 0.0.0
