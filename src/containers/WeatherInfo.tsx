@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import WeatherInfo from "../components/WeatherInfo";
 import useRootState from "../global/useRootState";
 import styled from "styled-components";
+
 const WeatherInfoContainer = (): JSX.Element => {
   const dispatch = useDispatch();
   const is_loading = useRootState((state) => state.weather.is_loading);
@@ -24,10 +25,15 @@ const WeatherInfoContainer = (): JSX.Element => {
 };
 
 const Button = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a7f37;
+  color: #f0f6fc;
+  padding: 1rem;
   border-radius: 8px;
-  background-color: #32b986;
-  color: black;
+  font-family: "Roboto", sans-serif;
   &:hover {
     cursor: pointer;
   }

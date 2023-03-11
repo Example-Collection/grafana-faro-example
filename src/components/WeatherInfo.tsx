@@ -66,21 +66,31 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #4dca9a;
+  align-items: center;
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: "Roboto", sans-serif;
 `;
 
 const LocationInformation = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #afafaf;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #1a7f37;
+  line-height: 1.5;
 `;
 
-export const CurrentInformation = styled.div`
+const CurrentInformation = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffc62a;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #1f6feb;
+  line-height: 1.3;
 `;
 
 const KeyValueContainer = styled.div`
