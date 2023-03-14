@@ -8,8 +8,8 @@ deployment:
   name: faro-demo-react
 image:
   name: robbyra98/faro-demo-react
-  tag: 0.0.0
-  pullPolicy: IfNotPresent
+  tag: 0.0.1
+  pullPolicy: Always
 container:
   name: faro-demo-react
   port: 80
