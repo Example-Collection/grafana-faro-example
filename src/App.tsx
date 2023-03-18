@@ -1,8 +1,12 @@
 import React from "react";
-import WeatherInfo from "./containers/WeatherInfo";
+import Router from "./components/Router";
+import GlobalStyles from "./GlobalStyles";
 
-function App() {
-  return <WeatherInfo />;
-}
+const App: React.FC = () => (
+  <>
+    <GlobalStyles />
+    <Router />
+  </>
+);
 
 export default App;

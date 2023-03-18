@@ -15,3 +15,7 @@ export interface WeatherResponse {
     feelslike_c: number;
   };
 }
+
+export interface ItemResponse {
+  message: string;
+}

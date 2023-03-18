@@ -1,0 +1,20 @@
+metadata:
+  namespace: faro-demo-react
+  labels:
+    app: faro-demo-react
+deployment:
+  replicaCount: 1
+  namespace: faro-demo-react
+  name: faro-demo-react
+image:
+  name: robbyra98/faro-demo-react
+  tag: 0.0.1
+  pullPolicy: Always
+container:
+  name: faro-demo-react
+  port: 80
+  protocol: TCP
+service:
+  name: faro-demo-react
+  type: NodePort
+  targetPort: 80

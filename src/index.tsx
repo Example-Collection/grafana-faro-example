@@ -1,17 +1,24 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { Store } from "./root.redux";
+import { FaroErrorBoundary } from "@grafana/faro-react";
+import { initializeFaro } from "./global/initializeFaro";
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
-  <Provider store={Store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
-  document.getElementById("root")
+initializeFaro();
+
+const container = document.getElementById("root");
+const root = createRoot(container!);
+root.render(
+  <React.StrictMode>
+    <FaroErrorBoundary>
+      <Provider store={Store}>
+        <App />
+      </Provider>
+    </FaroErrorBoundary>
+  </React.StrictMode>
 );
 
 reportWebVitals();
